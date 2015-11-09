@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_acinventario_acinventario,acinventario.acinventario,model_acinventario_acinventario,,1,0,0,0
