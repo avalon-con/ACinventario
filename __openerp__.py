@@ -7,7 +7,7 @@
     Descripción Larga
     """,
     'author': "Avalon Consultores C.A.",
-    'website': "http://www.avalon.com/inventario",
+    'website': "http://www.avalon.com.ve/inventario",
     'category': 'Inventory',
     'version': '0.1',
     'license': 'AGPL-3',
