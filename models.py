@@ -2,14 +2,8 @@
 
 from openerp import models, fields, api
 
-# class acinventario(models.Model):
-#     _name = 'acinventario.acinventario'
-
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         self.value2 = float(self.value) / 100
+class ExtAlmacen(models.Model):
+	_inherit = 'stock.warehouse'
+	
+	superficie = fields.Float(string="Superficie", help="Valor de la superficie del almacén expresado en metros cuadrados.")
+	altura_max = fields.Float(string="Altura Máxima", help="Valor de la altura máxima del almacén expresada en metros.")

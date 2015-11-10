@@ -1,60 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
   <data>
-    <!-- explicit list view definition -->
-    <!--
-    <record model="ir.ui.view" id="acinventario.list">
-      <field name="name">acinventario list</field>
-      <field name="model">acinventario.acinventario</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
-      </field>
-    </record>
-    -->
 
-    <!-- actions opening views on models -->
-    <!--
-    <record model="ir.actions.act_window" id="acinventario.action_window">
-      <field name="name">acinventario window</field>
-      <field name="res_model">acinventario.acinventario</field>
-      <field name="view_mode">tree,form</field>
+    <record id="acinventario_stock_warehouse_form" model="ir.ui.view">
+        <field name="name">acinventario.stock.warehouse.form</field>
+        <field name="model">stock.warehouse</field>
+        <field name="inherit_id" ref="stock.view_warehouse"/>
+        <field name="arch" type="xml">
+          <xpath expr="//field[@name='code']" position="after">
+            <field name="superficie" />
+          </xpath>
+          <xpath expr="//field[@name='partner_id']" position="after">
+            <field name="altura_max" />
+          </xpath>
+        </field>
     </record>
-    -->
 
-    <!-- server action to the one above -->
-    <!--
-    <record model="ir.actions.server" id="acinventario.action_server">
-      <field name="name">acinventario server</field>
-      <field name="model_id" ref="model_acinventario_acinventario"/>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-      </field>
-    </record>
-    -->
-  
-    <!-- Top menu item -->
-    <!--
-    <menuitem name="acinventario" id="acinventario.menu_root"/>
-    -->
-    <!-- menu categories -->
-    <!--
-    <menuitem name="Menu 1" id="acinventario.menu_1" parent="acinventario.menu_root"/>
-    <menuitem name="Menu 2" id="acinventario.menu_2" parent="acinventario.menu_root"/>
-    -->
-    <!-- actions -->
-    <!--
-    <menuitem name="List" id="acinventario.menu_1_list" parent="acinventario.menu_1"
-              action="acinventario.action_window"/>
-    <menuitem name="Server to list" id="acinventario" parent="acinventario.menu_2"
-              action="acinventario.action_server"/>
-    -->
   </data>
 </openerp>
